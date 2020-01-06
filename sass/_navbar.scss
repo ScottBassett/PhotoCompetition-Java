@@ -1,8 +1,11 @@
 // Partial for the Nav Bar
 
 .navbar {
-  background-color: #DDDDDD;
+  border-radius: 25px;
+  border: 2px solid rgb(235, 195, 64);
+  background-color: rgb(235, 195, 64);
   height: 64px;
+  opacity: 0.5;
 }
 
 .navbar-list {
@@ -16,3 +19,11 @@
 
   list-style: none;
 }
+
+// .main-content {
+//   border-radius: 25px;
+//   border: 2px solid #73AD21;
+//   padding: 20px;
+//   width: 200px;
+//   height: 150px;
+// }

@@ -6,6 +6,8 @@
 
 body {
   margin: 0;
+  background-color: rgb(150, 60, 73);
+  font-family: 'Long Cang', cursive;
 }
 
 .main-content {
@@ -13,4 +15,8 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 24px;
+}
+
+img:hover {
+  opacity: 0.5;
 }
