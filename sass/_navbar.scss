@@ -1,29 +1,63 @@
 // Partial for the Nav Bar
+$page-background : #303f9f;
+$nav-background : white;
+$color : rgba(black, .87);
+$transition : .75s;
 
-.navbar {
-  border-radius: 25px;
-  border: 2px solid rgb(235, 195, 64);
-  background-color: rgb(235, 195, 64);
-  height: 64px;
-  opacity: 0.5;
+nav {
+  width: 300px;
+  background: $nav-background;
+  color: $color;
+  -webkit-clip-path: circle(24px at 30px 24px);
+  clip-path: circle(24px at 32px 24px);
+  transition:
+    -webkit-clip-path $transition*.75,
+    clip-path $transition/2;
+  
+  &:hover {
+    transition-timing-function: ease-out;
+    transition-duration: $transition;
+    -webkit-clip-path: circle(390px at 225px 24px);
+    clip-path: circle(390px at 150px 24px);
+  }
 }
 
-.navbar-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  height: 100%;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
+a {
+  display: block;
+  line-height: 50px;
+  padding: 0 20px;
+  color: inherit;
+  cursor: pointer;
+  user-select: none;
+  
+  &:hover { background: #ffe082; }
+  &:active { background: #ffca28; }
 }
 
-// .main-content {
-//   border-radius: 25px;
-//   border: 2px solid #73AD21;
-//   padding: 20px;
-//   width: 200px;
-//   height: 150px;
-// }
+
+@mixin line {
+  width: 20px;
+  height: 2px;
+  background: $color;
+}
+
+.navicon {
+  padding: 23px 20px;
+  cursor: pointer;
+  transform-origin: 32px 24px;
+  
+  div {
+    position: relative;
+    @include line;
+    
+    &:before, &:after {
+      display: block;
+      content: "";
+      @include line;
+      position: absolute;
+    }
+    
+    &:before { top: -7px; }
+    &:after { top: 7px; }
+  }
+}

@@ -21,18 +21,33 @@ function loadRandomImage() {
             $("#name").text(json.name);
             $("#licence").text(json.license);
 
-            $("voting-button vote-up")
-
+            sessionStorage.setItem("photoId",json.id);
         })
         .catch(function (err) {
             console.error('Request to /random failed: ', err);
-        });
-        
+        });    
 }
-
-
 
 $(function () {
     loadRandomImage();
 });
 
+$(function () {
+    $('.vote-up').click(function() {  
+        const photoId = sessionStorage.getItem("photoId");    
+    $.post(buildUrl('/id/' + photoId +'/vote/up'));
+    loadRandomImage();
+    })
+})
+
+$(function () {
+    $('.vote-down').click(function() {    
+        const photoId = sessionStorage.getItem("photoId");    
+    $.post(buildUrl('/id/' + photoId +'/vote/down'));
+    loadRandomImage();
+    })
+})
+
+$(function () {
+    $.post(buildUrl('/top'));
+})

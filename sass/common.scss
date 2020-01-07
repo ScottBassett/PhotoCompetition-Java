@@ -1,13 +1,26 @@
 // Import partials
 @import 'index';
 @import 'navbar';
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
 
 // Global styling
+$page-background : #303f9f;
+$nav-background : white;
+$color : rgba(black, .87);
+$transition : .75s;
 
 body {
-  margin: 0;
-  background-color: rgb(150, 60, 73);
-  font-family: 'Long Cang', cursive;
+  font: 100% Roboto;
+  background: $page-background;
+  margin: 50px;
+}
+
+.content-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 .main-content {
@@ -15,8 +28,5 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 24px;
-}
-
-img:hover {
-  opacity: 0.5;
+  color: white;
 }

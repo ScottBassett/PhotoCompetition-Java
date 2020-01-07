@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
     <!-- Essential meta tags -->
     <meta charset="utf-8">
@@ -24,43 +24,48 @@
 <body>
 
 <!-- Navigation bar -->
-<nav class="navbar main-content">
-    <ul class="navbar-list">
-        <li class="navbar-item"><a class="navbar-title" href="index.html">Photo Competition</a></li>
-        <li class="navbar-item"><a class="navbar-link" href="about.html">About</a></li>
-    </ul>
+<nav>
+    <div class="navicon">
+        <div></div>
+      </div>
+      
+      <a class="navbar-title" href="index.html">Photo Competition</a>
+      <a class="navbar-link" href="about.html">About</a>
+      <a class="navbar-link" href="topRated.html">Top Rated</a>
 </nav>
 
+<div class="content-container">
 <!-- Page content -->
-<div class="main-content">
-    <h1 class="page-title">Photo Competition</h1>
+    <div class="main-content">
+        <h1 class="page-title">Photo Competition</h1>
 
-    <div class="image-container">
-        <!-- src and alt attribute will be populated by index.js on page load -->
-        <img id="main-image" src="">
+        <div class="image-container">
+            <!-- src and alt attribute will be populated by index.js on page load -->
+            <img id="main-image" src="1x" alt="Main image">
+        </div>
+
+        <div class="voting-buttons">
+            <button class="button vote-up"></button>
+            <button class="button vote-down"></button>
+        </div>
+
+        <table class="image-details">
+            <tbody>
+                <tr>
+                    <td><b>Author</b></td>
+                    <td id="author">Scott Bassett.</td>
+                </tr>
+                <tr>
+                    <td><b>Name</b></td>
+                    <td id="name">TODO: Fill in image details.</td>
+                </tr>
+                <tr>
+                    <td><b>Licence</b></td>
+                    <td id="licence">1234</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-
-    <div class="voting-buttons">
-        <button class="voting-button vote-up">I love it</button>
-        <button class="voting-button vote-down">I hate it</button>
-    </div>
-
-    <table class="image-details">
-        <tbody>
-            <tr>
-                <td><b>Author</b></td>
-                <td id="author">Scott Bassett.</td>
-            </tr>
-            <tr>
-                <td><b>Name</b></td>
-                <td id="name">TODO: Fill in image details.</td>
-            </tr>
-            <tr>
-                <td><b>Licence</b></td>
-                <td id="licence">1234</td>
-            </tr>
-        </tbody>
-    </table>
 </div>
 
 </body>
