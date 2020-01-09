@@ -1,14 +1,19 @@
 // Partial for the Index page
 
+$imageHeight: 500px;
+$imageWidth: 400 px;
 
 img {
-  //max-width: 150px;
-  max-height: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: $imageHeight;
+  max-width:$imageWidth;
   }
 
-.image-container, #main-image {
-  max-width: 100%;
-  height: auto
+.image-container {
+  height: $imageHeight;
+  width:$imageWidth;
 }
 
 .voting-buttons {
