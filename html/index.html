@@ -29,19 +29,20 @@
         <div></div>
       </div>
       
-      <a class="navbar-title" href="index.html">Photo Competition</a>
-      <a class="navbar-link" href="about.html">About</a>
-      <a class="navbar-link" href="topRated.html">Top Rated</a>
+      <a tabindex="0" class="navbar-title" href="index.html">Photo Competition</a>
+      <a tabindex="0" class="navbar-link" href="about.html">About</a>
+      <a tabindex="0" class="navbar-link" href="topRated.html">Top Rated</a>
+      <a tabindex="0" class="navbar-link" href="uploadImage.html">Upload Image</a>
 </nav>
 
 <div class="content-container">
 <!-- Page content -->
-    <div class="main-content">
-        <h1 class="page-title">Photo Competition</h1>
+    <div role="main" class="main-content">
+        <h1 tabindex="0" class="page-title">Photo Competition</h1>
 
         <div class="image-container">
             <!-- src and alt attribute will be populated by index.js on page load -->
-            <img id="main-image" src="1x" alt="Main image">
+            <img tabindex="0" id="main-image" src="1x" alt="Main image">
         </div>
 
         <div class="voting-buttons">
@@ -49,22 +50,28 @@
             <button class="button vote-down"></button>
         </div>
 
-        <table class="image-details">
-            <tbody>
-                <tr>
-                    <td><b>Author</b></td>
-                    <td id="author">Scott Bassett.</td>
-                </tr>
-                <tr>
-                    <td><b>Name</b></td>
-                    <td id="name">TODO: Fill in image details.</td>
-                </tr>
-                <tr>
-                    <td><b>Licence</b></td>
-                    <td id="licence">1234</td>
-                </tr>
-            </tbody>
-        </table>
+        <!-- <div class="text-table"> -->
+            <table class="image-details">
+                <tbody>
+                    <tr tabindex="0">
+                        <td><b>Author</b></td>
+                        <td id="author">Scott Bassett.</td>
+                    </tr>
+                    <tr tabindex="0">
+                        <td><b>Name</b></td>
+                        <td id="name">TODO: Fill in image details.</td>
+                    </tr>
+                    <tr tabindex="0">
+                        <td><b>Score</b></td>
+                        <td id="score">1</td>
+                    </tr>
+                    <tr tabindex="0">
+                        <td><b>Licence</b></td>
+                        <td id="licence">1234</td>
+                    </tr>
+                </tbody>
+            </table>
+        <!-- </div> -->
     </div>
 </div>
 

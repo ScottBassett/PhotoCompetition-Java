@@ -19,6 +19,7 @@ function loadRandomImage() {
 
             $("#author").text(json.author);
             $("#name").text(json.name);
+            $("#score").text(json.score);
             $("#licence").text(json.license);
 
             sessionStorage.setItem("photoId",json.id);

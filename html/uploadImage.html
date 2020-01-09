@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <!-- Essential meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Softwire Web Development Training Example">
+    <meta name="author" content="Softwire">
+
+    <!-- Title -->
+    <title>Photo Competition - About</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../stylesheets/common.css">
+
+    <!-- Vendor JS -->
+    <script src="../js/vendor/jquery-3.3.1.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/uploadImage.js"></script>    
+</head>
+
+<body>
+
+<!-- Navigation bar -->
+<nav>
+    <div class="navicon">
+        <div></div>
+      </div>
+      
+      <a tabindex="0" class="navbar-title" href="index.html">Photo Competition</a>
+      <a tabindex="0" class="navbar-link" href="about.html">About</a>
+      <a tabindex="0" class="navbar-link" href="topRated.html">Top Rated</a>
+      <a tabindex="0" class="navbar-link" href="uploadImage.html">Upload Image</a>
+</nav>
+
+<!-- Page content -->
+<div class="upload-form">
+      <form onsubmit="uploadImage(event)" id="frm1" >
+        <label tabindex="0" for="file">Upload file</label>
+        <input type="file" id="image" name="file">
+        <div></div>
+        <div></div>
+        <div></div>
+    
+        <label for="iName">Image Name</label>
+        <input type="text" id="name" name="name" placeholder="Your image name">
+
+        <label for="author">Author</label>
+        <input type="text" id="author" name="author" placeholder="Author name">
+
+        <label for="license">License</label>
+        <select id="license" name="cars">
+            <option value="CC_BY">CC_BY</option>
+            <option value="CC_BY_SA">CC_BY_SA</option>
+            <option value="CC_BY_ND">CC_BY_ND</option>
+          </select>
+      
+        <input  id="submit" type="submit" value="Submit">
+      </form>
+</div>
+
+</body>
+</html>
